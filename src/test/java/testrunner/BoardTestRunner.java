@@ -3,6 +3,7 @@ package testrunner;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.BoardPage;
+import pages.DeletePage;
 import pages.ListPage;
 import setup.Setup;
 
@@ -18,6 +19,9 @@ public class BoardTestRunner extends Setup {
         ListPage listPage = new ListPage(driver);
         listPage.docreateList("test", "hshhshs", driver);
         Assert.assertTrue(listPage.listBtn.isDisplayed());
+
+        DeletePage deletePage = new DeletePage(driver);
+        deletePage.dodeleteList();
 
 
     }

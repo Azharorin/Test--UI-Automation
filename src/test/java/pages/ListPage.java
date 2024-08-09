@@ -9,17 +9,17 @@ import org.openqa.selenium.support.PageFactory;
 public class ListPage {
 
     @FindBy(xpath = "//div[@data-cy=\"create-list\"]")
+    //Create List
     WebElement labelList;
-
-    ///label clcik board
-    @FindBy(css="#board-10")
-    WebElement boardlabel;
     @FindBy(xpath = "//input[@data-cy=\'add-list-input\']")
+    //Add list input (enter List Title)
     WebElement txtlistTitle;
     @FindBy(xpath = "//button[text()='Add list']")
-    public
-    WebElement listBtn;
+    // Add List Button
+    public WebElement listBtn;
+
     public ListPage(WebDriver driver) {
+
         PageFactory.initElements(driver, this);
     }
 
