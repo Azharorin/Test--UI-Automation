@@ -24,11 +24,8 @@ public class ListPage {
     }
 
     public void docreateList(String listtitle, String secondlisttitle, WebDriver driver) {
-
-        Actions actions = new Actions(driver);
         txtlistTitle.sendKeys(listtitle);
         listBtn.click();
-        // actions.moveToElement(txtlistTitle).perform();
         txtlistTitle.sendKeys(secondlisttitle);
         listBtn.click();
 
